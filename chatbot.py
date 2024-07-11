@@ -7,10 +7,17 @@ from langchain.chains.question_answering import load_qa_chain
 #langchain is a framework 
 from langchain_community.chat_models import ChatOpenAI
 
-OPENAI_API_KEY = "" #openAI key
+from dotenv import load_dotenv
+import os
+
+# Load the .env file
+load_dotenv()
+
+# Accessing variables
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 #Upload PDF file
-st.header("My First Chatbot")
+st.header("Practice File Chatbot")
 with st.sidebar: 
     st.title("Your Documents")
     file = st.file_uploader("Upload a PDF file and start asking questions", type="pdf")

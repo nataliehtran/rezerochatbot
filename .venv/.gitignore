@@ -1,0 +1,4 @@
+#ignoring specific file 
+.env
+
+/lib
