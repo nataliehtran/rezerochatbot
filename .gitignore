@@ -1,0 +1,5 @@
+#ignoring specific file 
+.env
+
+/lib
+/bin
